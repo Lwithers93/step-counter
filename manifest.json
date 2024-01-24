@@ -1,0 +1,17 @@
+{
+  "background_color": "black",
+  "description": "This is your personal Step Counter App.",
+  "orientation": "portrait-primary",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "W-logo.png",
+      "sizes": "179x179",
+      "type": "image/png"
+    }
+  ],
+  "name": "Step Counter App",
+  "short_name": "Step Counter",
+  "start_url": "index.html",
+  "permissions": ["storage"]
+}
