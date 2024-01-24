@@ -7,20 +7,23 @@ var countDisplay = document.querySelector("#stepCount");
 //   countDisplay = stepCount;
 // });
 
-var x;
-var y;
-var z;
+var oldX = 0;
+var oldY = 0;
+var oldZ = 0;
 
 function handleMotionEvent(event) {
   var newX = event.accelerationIncludingGravity.x;
   var newY = event.accelerationIncludingGravity.y;
   var newZ = event.accelerationIncludingGravity.z;
 
-  if ((newX !== x) | (newY !== y) | (newZ !== z)) {
+  if ((newX !== oldX) | (newY !== oldY) | (newZ !== oldZ)) {
     stepCount += 1;
     countDisplay = stepCount;
   }
   console.log(x, y, z);
+  oldX = newX;
+  oldY = newY;
+  oldZ = newZ;
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);
