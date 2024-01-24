@@ -20,7 +20,7 @@ function handleMotionEvent(event) {
     stepCount += 1;
     countDisplay = stepCount;
   }
-  console.log(x, y, z);
+    console.log(newX, newY, newZ);
   oldX = newX;
   oldY = newY;
   oldZ = newZ;
